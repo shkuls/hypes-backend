@@ -1,0 +1,14 @@
+version: 1.0
+applications:
+  - backend:
+      phases:
+        preBuild:
+          commands:
+            - npm install
+         # If applicable, e.g., transpiling with Babel or TypeScript
+      artifacts:
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
